@@ -9,14 +9,13 @@ class $namePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (BuildContext context) => $nameBloc()..add(InitEvent()),
+      create: (BuildContext context) => $nameBloc(),
       child: Builder(builder: (context) => _buildPage(context)),
     );
   }
 
   Widget _buildPage(BuildContext context) {
     final bloc = BlocProvider.of<$nameBloc>(context);
-
     return Container();
   }
 }
