@@ -225,14 +225,14 @@ public class NewBloc extends AnAction {
 
     private void generateDefault(String folder, String prefixName) {
         String path = psiPath + folder;
-        generateFile("view.dart", path, prefixName + data.viewFileName.toLowerCase() + ".dart");
+        generateFile("page.dart", path, prefixName + data.viewFileName.toLowerCase() + ".dart");
         generateFile("state.dart", path, prefixName + "state" + ".dart");
         generateFile("cubit.dart", path, prefixName + data.cubitName.toLowerCase() + ".dart");
     }
 
     private void generateHigh(String folder, String prefixName) {
         String path = psiPath + folder;
-        generateFile("high/view.dart", path, prefixName + data.viewFileName.toLowerCase() + ".dart");
+        generateFile("high/page.dart", path, prefixName + data.viewFileName.toLowerCase() + ".dart");
         if (data.bloc8) {
             generateFile("bloc8.0+/bloc.dart", path, prefixName + data.blocName.toLowerCase() + ".dart");
         } else {

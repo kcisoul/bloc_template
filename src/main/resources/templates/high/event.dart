@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 abstract class $nameEvent {}
 
 class $nameEventInit extends $nameEvent {
-  $nameEventInit(this.index);
+  $nameEventInit();
 }
 
 class $nameEventLoadData extends $nameEvent {
