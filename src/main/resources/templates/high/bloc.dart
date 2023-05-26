@@ -13,12 +13,12 @@ class $nameBloc extends Bloc<$nameEvent, $nameState> {
     emit($nameStateInitialized());
   }
 
-  void _loadData($nameEventReload event, Emitter<$nameState> emit) async {
-    emit($nameStateDataLoaded(1));
+  void _loadData($nameEventLoadData event, Emitter<$nameState> emit) async {
+    emit($nameStateDataLoaded());
   }
 
   void _reload($nameEventReload event, Emitter<$nameState> emit) async {
-    emit($nameStateReloaded);
+    emit($nameStateReloaded());
   }
 
 }
