@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import '$name_event.dart';
-import '$name_state.dart';
+import 'event.dart';
+import 'state.dart';
 
 class $nameBloc extends Bloc<$nameEvent, $nameState> {
   $nameBloc() : super($nameStateNone()) {
