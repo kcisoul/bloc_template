@@ -6,6 +6,7 @@ import 'event.dart';
 import 'state.dart';
 
 class $namePage extends StatelessWidget {
+  const $namePage({super.key});
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
