@@ -56,11 +56,11 @@ public class NewBloc extends AnAction {
 
         //Set the main mode style
         //deal default value
-        setMode(container);
-
-        //Setting options: whether to use prefix
-        //deal default value
-        setCodeFile(container);
+//        setMode(container);
+//
+//        //Setting options: whether to use prefix
+//        //deal default value
+//        setCodeFile(container);
 
         //Generate module name and OK cancel button
         setModuleAndConfirm(container);
@@ -186,16 +186,11 @@ public class NewBloc extends AnAction {
     }
 
     private void createFile() {
-        String type = templateGroup.getSelection().getActionCommand();
-        //deal default value
-        if (BlocConfig.modeDefault.equals(type)) {
-            data.defaultMode = 0;
-        } else if (BlocConfig.modeHigh.equals(type)) {
-            data.defaultMode = 1;
-        }
-        data.useFolder = folderBox.isSelected();
-        data.usePrefix = prefixBox.isSelected();
-        data.bloc8 = bloc8Box.isSelected();
+        String type = "Bloc";
+        data.defaultMode = 1;
+        data.useFolder = true;
+        data.usePrefix = true;
+        data.bloc8 = true;
 
 
         String name = upperCase(nameTextField.getText());
@@ -212,15 +207,7 @@ public class NewBloc extends AnAction {
         if (data.usePrefix) {
             prefixName = prefix + "_";
         }
-
-        switch (type) {
-            case BlocConfig.modeDefault:
-                generateDefault(folder, prefixName);
-                break;
-            case BlocConfig.modeHigh:
-                generateHigh(folder, prefixName);
-                break;
-        }
+        generateHigh(folder, prefixName);
     }
 
     private void generateDefault(String folder, String prefixName) {
@@ -273,8 +260,9 @@ public class NewBloc extends AnAction {
     private String dealContent(String inputFileName, String outFileName) {
         //name baseFolder
         String baseFolder = "/templates/";
-        String type = templateGroup.getSelection().getActionCommand();
+        //String type = templateGroup.getSelection().getActionCommand();
 
+        String type = "Bloc";
         //read file
         String content = "";
         try {
