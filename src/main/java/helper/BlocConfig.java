@@ -25,7 +25,7 @@ public class BlocConfig {
 
     //view layer name
     public static String viewName = "Page";
-    public static String viewFileName = "View";
+    public static String viewFileName = "page";
 
     //event layer name
     public static String eventName = "Event";
